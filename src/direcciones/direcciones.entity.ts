@@ -1,8 +1,9 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToOne } from 'typeorm';
 import { Personas } from 'src/personas/personas.entity';
+import { GenericEntity } from 'src/generic/generic.entity';
 
 @Entity()
-export class Direcciones {
+export class Direcciones extends GenericEntity{
   @PrimaryGeneratedColumn()
   id: number;
 

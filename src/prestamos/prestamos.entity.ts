@@ -1,5 +1,5 @@
 import { GenericEntity } from 'src/generic/generic.entity';
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, OneToMany, JoinColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany, JoinColumn } from 'typeorm';
 import { Clientes } from 'src/clientes/clientes.entity';
 import { Abonos } from 'src/abonos/abonos.entity';
 
