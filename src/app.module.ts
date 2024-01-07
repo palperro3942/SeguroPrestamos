@@ -3,13 +3,12 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AbonosModule } from './abonos/abonos.module';
 import { ClientesModule } from './clientes/clientes.module';
-import { DireccionesModule } from './direcciones/direcciones.module';
-import { FuentesModule } from './fuentes/fuentes.module';
-import { PersonasModule } from './personas/personas.module';
 import { PrestamosModule } from './prestamos/prestamos.module';
 import { SetupModule } from './setup/setup.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { SetupService } from './setup/setup.service';
+import { InversionistaModule } from './inversionista/inversionista.module';
+import { InversionesModule } from './inversiones/inversiones.module';
 
 @Module({
   imports: [
@@ -18,11 +17,10 @@ import { SetupService } from './setup/setup.service';
   }),
     AbonosModule,
     ClientesModule,
-    DireccionesModule,
-    FuentesModule,
-    PersonasModule,
     PrestamosModule,
-    SetupModule],
+    SetupModule,
+    InversionistaModule,
+    InversionesModule],
   controllers: [AppController],
   providers: [AppService],
 })

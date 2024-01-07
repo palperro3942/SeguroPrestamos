@@ -6,10 +6,10 @@ export class SetupService implements TypeOrmOptionsFactory {
     createTypeOrmOptions(): TypeOrmModuleOptions {
       return {
         type: 'mysql',
-        host: '127.0.0.1',
+        host: 'localhost',
         port: 3306,
         username: 'root',
-        password: 'password',
+        password: 'Tenedor',
         database: 'prestamos_test',
         entities: [__dirname + '/../**/*.entity{.ts,.js}'],
         synchronize: true,
