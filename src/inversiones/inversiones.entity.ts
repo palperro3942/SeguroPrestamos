@@ -15,8 +15,11 @@ export class Inversiones extends GenericEntity {
   @Column({ type: 'date' })
   fecha: Date;
 
-  @Column({ type: 'float' })
-  cantidad: number;
+  @Column({ type: 'decimal' })
+  cantidad: number; // Cantidad total invertida
+
+  @Column({ type: 'decimal' })
+  cantidad_disponible: number; // Cantidad disponible para préstamos
 
   @Column({ type: 'varchar' })
   metodo_ingreso: string; // Puedes cambiar a un tipo de enumeración si es más adecuado
@@ -24,11 +27,12 @@ export class Inversiones extends GenericEntity {
   @Column({ type: 'decimal', precision: 5, scale: 2 })
   porcentaje_interes: number;
 
+  @Column({ type: 'int' })
+  id_inversionista: number;
+
   // Relación Inversionista-Inversion
   @ManyToOne(() => Inversionista, inversionista => inversionista.inversiones)
+  @JoinColumn({ name: 'id_inversionista' })
   inversionista: Inversionista;
 
-  // Relación Inversiones-Prestamos
-  @OneToMany(() => Prestamos, prestamo => prestamo.inversion)
-  prestamos: Prestamos[];
 }

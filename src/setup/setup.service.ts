@@ -9,7 +9,7 @@ export class SetupService implements TypeOrmOptionsFactory {
         host: 'localhost',
         port: 3306,
         username: 'root',
-        password: 'Tenedor',
+        password: 'password',
         database: 'prestamos_test',
         entities: [__dirname + '/../**/*.entity{.ts,.js}'],
         synchronize: true,

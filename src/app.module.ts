@@ -9,6 +9,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { SetupService } from './setup/setup.service';
 import { InversionistaModule } from './inversionista/inversionista.module';
 import { InversionesModule } from './inversiones/inversiones.module';
+import { FuentesModule } from './fuentes/fuentes.module';
 
 @Module({
   imports: [
@@ -20,7 +21,8 @@ import { InversionesModule } from './inversiones/inversiones.module';
     PrestamosModule,
     SetupModule,
     InversionistaModule,
-    InversionesModule],
+    InversionesModule,
+    FuentesModule],
   controllers: [AppController],
   providers: [AppService],
 })

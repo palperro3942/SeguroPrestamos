@@ -9,9 +9,6 @@ export class Clientes extends GenericEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ type: 'int', unique: true })  // Haciendo la columna única
-  id_cliente: number;
-
   @Column({ type: 'varchar' })
   nombre: string;
 
