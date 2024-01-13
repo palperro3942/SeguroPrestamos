@@ -11,4 +11,5 @@ import { Inversiones } from 'src/inversiones/inversiones.entity';
   controllers: [AbonosController],
   providers: [AbonosService],
 })
+
 export class AbonosModule {}
