@@ -14,13 +14,13 @@ export class Abonos extends GenericEntity {
   @Column({ type: 'int' })
   id_prestamo: number;
 
-  @Column({ type: 'decimal' })
+  @Column({ type: 'float' })
   cantidad: number;
 
   @Column({ type: 'varchar' })
   metodo_entrada: string;
 
-  @Column({ type: 'text' })
+  @Column({ type: 'text', nullable: true })
   comentario: string;
 
   // Relacion Prestamo-Abono

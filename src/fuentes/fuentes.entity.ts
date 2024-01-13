@@ -19,6 +19,6 @@ export class Fuentes extends GenericEntity {
   @JoinColumn({ name: 'id_inversion' })
   inversion: Inversiones;
 
-  @Column({ type: 'decimal' })
+  @Column({ type: 'float' })
   cantidad: number;
 }

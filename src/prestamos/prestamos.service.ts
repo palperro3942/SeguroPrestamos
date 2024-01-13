@@ -44,6 +44,7 @@ export class PrestamosService extends GenericService<Prestamos> {
     // Realizar el préstamo
     const prestamo = new Prestamos();
     prestamo.cantidad = data.cantidad;
+    prestamo.montoRestante = data.cantidad;
     prestamo.id = data.id_inversion;
     prestamo.id_cliente = data.id_cliente;
     prestamo.interes = data.interes;

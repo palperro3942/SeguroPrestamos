@@ -14,10 +14,10 @@ export class Prestamos extends GenericEntity {
   @Column({ type: 'date' })
   fecha: Date;
 
-  @Column({ type: 'decimal' })
+  @Column({ type: 'float' })
   cantidad: number;
 
-  @Column({ type: 'decimal', precision: 5, scale: 2, default: 0})
+  @Column({ type: 'float', precision: 5, scale: 2, default: 0})
   interes: number;
 
   @Column({ type: 'varchar' })
@@ -26,11 +26,17 @@ export class Prestamos extends GenericEntity {
   @Column({ type: 'varchar' })
   origen_fuente: string;
 
-  @Column({ type: 'text', default: null })
+  @Column({ type: 'text', nullable: true})
   garantia: string;
 
   @Column({ type: 'int' })
   id_cliente: number;
+
+  @Column({ type: 'float', default: 0 })
+  montoRestante: number;
+
+  @Column({ type: 'boolean', default: false })
+  pagado: boolean;
 
   // Relaciones
   @ManyToOne(() => Clientes, cliente => cliente.prestamo)

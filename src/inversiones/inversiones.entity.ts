@@ -15,16 +15,16 @@ export class Inversiones extends GenericEntity {
   @Column({ type: 'date' })
   fecha: Date;
 
-  @Column({ type: 'decimal' })
+  @Column({ type: 'float' })
   cantidad: number; // Cantidad total invertida
 
-  @Column({ type: 'decimal' })
+  @Column({ type: 'float' })
   cantidad_disponible: number; // Cantidad disponible para préstamos
 
   @Column({ type: 'varchar' })
   metodo_ingreso: string; // Puedes cambiar a un tipo de enumeración si es más adecuado
 
-  @Column({ type: 'decimal', precision: 5, scale: 2 })
+  @Column({ type: 'float', precision: 5, scale: 2, nullable: true, default: 0 })
   porcentaje_interes: number;
 
   @Column({ type: 'int' })
